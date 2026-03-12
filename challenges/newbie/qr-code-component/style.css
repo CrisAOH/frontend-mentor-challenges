@@ -8,9 +8,55 @@
 }
 
 body {
+  min-height: 100vh;
   font-size: 15px;
   font-family: "Outfit";
   background-color: var(--slate-300);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /*display: block;*/
+  height: 499px;
+  width: 320px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 16px 16px 40px 16px;
+  margin: 0 auto;
+}
+
+.card-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-text {
+  margin: 0 auto;
+  margin: 0px 16px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--slate-900);
+  line-height: 120%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--slate-500);
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  text-align: center;
 }
 
 .attribution {
