@@ -7,14 +7,18 @@
   --slate-900: hsl(218, 44%, 22%);
 }
 
-body {
+html {
   min-height: 100vh;
+}
+
+body {
   font-size: 15px;
   font-family: "Outfit";
   background-color: var(--slate-300);
 }
 
 main {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +41,6 @@ main {
 }
 
 .card-text {
-  margin: 0 auto;
   margin: 0px 16px;
 }
 
