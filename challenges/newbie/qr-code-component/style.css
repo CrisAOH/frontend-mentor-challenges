@@ -36,7 +36,7 @@ main {
 }
 
 .card-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -70,6 +70,15 @@ main {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.external-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.external-icon {
+  opacity: 0.8;
 }
 
 .sr-only {
