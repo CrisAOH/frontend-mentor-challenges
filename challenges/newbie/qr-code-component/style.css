@@ -3,7 +3,7 @@
   --slate-300: hsl(212, 45%, 89%);
   --slate-500: hsl(216, 15%, 48%);
   --slate-900: hsl(218, 44%, 22%);
-
+  --link-color: hsl(228, 45%, 44%);
   --shadow-offsets: 0 0.75rem 1rem;
   --shadow-color: rgba(10, 10, 10, 0.08);
 
@@ -51,6 +51,11 @@ main {
   box-shadow: var(--shadow-offsets) var(--shadow-color);
 }
 
+.card-image {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .card-image img {
   width: 100%;
   height: auto;
@@ -85,7 +90,7 @@ main {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--link-color);
 }
 
 .external-link {
