@@ -4,10 +4,8 @@
   --slate-500: hsl(216, 15%, 48%);
   --slate-900: hsl(218, 44%, 22%);
 
-  --shadow-offsets-not-transparent: 0 0.25rem 0.25rem 0;
-  --shadow-color-not-transparent: rgba(0, 0, 0, 0.25);
-  --shadow-offsets-transparent: 0 1.5625rem 1.5625rem 0;
-  --shadow-color-transparent: rgba(0, 0, 0, 0.477);
+  --shadow-offsets: 0 0.75rem 1rem;
+  --shadow-color: rgba(10, 10, 10, 0.08);
 
   font-size: 100%; /* 16px by default in most browsers -> 1rem = 16px*/
   /* Convert px to rem: ??px / 16px = ??rem*/
@@ -45,16 +43,12 @@ main {
 }
 
 .card {
-  /*display: block;*/
-  /*height: 499px;*/
   max-width: 20rem;
   background-color: var(--white);
   border-radius: 1.25rem;
   padding: 1rem 1rem 2.5rem 1rem;
   margin: 0 auto;
-  box-shadow:
-    var(--shadow-offsets-not-transparent) var(--shadow-color-not-transparent),
-    var(--shadow-offsets-transparent) var(--shadow-color-transparent);
+  box-shadow: var(--shadow-offsets) var(--shadow-color);
 }
 
 .card img {
@@ -103,14 +97,15 @@ main {
   opacity: 0.8;
 }
 
+/*Well-tested "visually hidden pattern. No need to change it."*/
 .sr-only {
   position: absolute;
-  width: 0.0625rem;
-  height: 0.0625rem;
+  width: 1px;
+  height: 1px;
   padding: 0;
-  margin: -0.0625rem;
+  margin: -1px;
   overflow: hidden;
-  clip-path: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
 }
