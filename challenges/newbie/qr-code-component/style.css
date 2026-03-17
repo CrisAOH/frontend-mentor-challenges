@@ -51,7 +51,7 @@ main {
   box-shadow: var(--shadow-offsets) var(--shadow-color);
 }
 
-.card img {
+.card-image img {
   width: 100%;
   height: auto;
   border-radius: 0.625rem;
