@@ -1,19 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700");
-
 :root {
   --white: hsl(0, 0%, 100%);
   --slate-300: hsl(212, 45%, 89%);
   --slate-500: hsl(216, 15%, 48%);
   --slate-900: hsl(218, 44%, 22%);
+
+  --shadow-offsets-not-transparent: 0 0.25rem 0.25rem 0;
+  --shadow-color-not-transparent: rgba(0, 0, 0, 0.25);
+  --shadow-offsets-transparent: 0 1.5625rem 1.5625rem 0;
+  --shadow-color-transparent: rgba(0, 0, 0, 0.477);
+
+  font-size: 100%; /* 16px by default in most browsers -> 1rem = 16px*/
+  /* Convert px to rem: ??px / 16px = ??rem*/
+
+  /*web font → common local alternatives → platform system fonts → generic family*/
+  font-family:
+    "Outfit",
+    "Helvetica Neue",
+    Arial,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Noto Sans",
+    sans-serif;
 }
 
-html {
-  min-height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-  font-size: 15px;
-  font-family: "Outfit";
+  font-size: 0.9375rem;
   background-color: var(--slate-300);
 }
 
@@ -27,44 +47,46 @@ main {
 .card {
   /*display: block;*/
   /*height: 499px;*/
-  max-width: 320px;
+  max-width: 20rem;
   background-color: var(--white);
-  border-radius: 20px;
-  padding: 16px 16px 40px 16px;
+  border-radius: 1.25rem;
+  padding: 1rem 1rem 2.5rem 1rem;
   margin: 0 auto;
-  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    var(--shadow-offsets-not-transparent) var(--shadow-color-not-transparent),
+    var(--shadow-offsets-transparent) var(--shadow-color-transparent);
 }
 
-img {
+.card img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .card-text {
-  margin: 0px 16px;
+  margin: 0 1rem;
 }
 
 .card-title {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: var(--slate-900);
   line-height: 120%;
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
   text-align: center;
 }
 
 .card-description {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: var(--slate-500);
   line-height: 140%;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
   text-align: center;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 
@@ -83,10 +105,10 @@ img {
 
 .sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
   clip-path: rect(0 0 0 0);
   white-space: nowrap;
